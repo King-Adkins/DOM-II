@@ -4,6 +4,7 @@ const destinationBtn = document.querySelectorAll('.destination .btn');
 for(let i = 0; i < destinationBtn.length; i++) {
 destinationBtn[i].addEventListener('click', (event) => {
     event.target.style.backgroundColor = 'red';
+    
 });
 
 destinationBtn[i].addEventListener('mouseover', (event) => {
@@ -11,7 +12,14 @@ destinationBtn[i].addEventListener('mouseover', (event) => {
 });
 
 destinationBtn[i].addEventListener('dblclick', (event) => {
+    event.target.style.backgroundColor = 'silver';
+    event.stopPropagation();
+});
+
+
+destinationBtn[i].addEventListener('dblclick', (event) => {
     event.target.style.backgroundColor = 'pink';
+    event.stopPropagation();
 });
 }
 
@@ -32,6 +40,7 @@ intro.addEventListener('mouseover', (event) => {
 const content = document.querySelector('.text-content h2');
 content.addEventListener('mouseover', (event) => {
     event.target.style.color = 'green';
+    
 });
 
 const adv = document.querySelector('.text-content p');
@@ -43,7 +52,7 @@ adv.addEventListener('mouseover', (event) => {
 const header3 = document.querySelector('.text-content h2');
 header3.addEventListener('mouseout', (event) => {
     event.target.style.color = 'orange';
-    event.stopPropagation();
+    
 })
 
 const aTag = document.querySelector('a');
